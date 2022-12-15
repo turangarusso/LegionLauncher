@@ -1,0 +1,3208 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>SaaUI</name>
+  </assembly>
+  <members>
+    <member name="T:SaaUI.SaaExtensions">
+      <summary>
+            This class contains extensions that you may find helpful. 
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.GetSize(System.String,System.Drawing.Font)">
+      <summary>
+            Provides the <see cref="T:System.Drawing.Size" /> of the specified text when drawn with the specified font.
+            </summary>
+      <param name="text">Text to measure</param>
+      <param name="font">Font of the text</param>
+      <returns>Returns in pixels, Size the text requires</returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.GetSize(SaaUI.SaaToast)">
+      <summary>
+            Gets the total Size (including Offsets) of all toasts that are open and visible on the screen. 
+            </summary>
+      <param name="toast">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.GetSize(SaaUI.SaaToast,SaaUI.ToastPosition)">
+      <summary>
+            Gets the total Size (including Offsets) of all toasts that are open and visible on the screen in the specified position.
+            </summary>
+      <param name="toast">
+      </param>
+      <param name="position">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.ToHEX(System.Drawing.Color)">
+      <summary>
+            Converts <see cref="T:System.Drawing.Color" /> to Hexadecimal
+            </summary>
+      <param name="color">Color to convert</param>
+      <returns>returns color in hexadecimal like #FFFF00</returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.ToRGB(System.Drawing.Color)">
+      <summary>
+            Converts <see cref="T:System.Drawing.Color" /> to RGB
+            </summary>
+      <param name="color">Color to convert</param>
+      <returns>returns color in RGB like RGB(255,255,0)</returns>
+    </member>
+    <member name="P:SaaUI.SaaExtensions.NewID">
+      <summary>
+            Generates globally unique ids. The possibility of generating same Id for lifetime is 0%.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.GetTransparency(System.Drawing.Color,System.Int32)">
+      <summary>
+            Makes a color transparent in the given percentage.
+            </summary>
+      <param name="color">
+      </param>
+      <param name="percentage">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.LocationRelativeToForm(System.Windows.Forms.Control)">
+      <summary>
+            Gets the location of a control relative to where it appears on the form. No matter if the control is inside other containers or nested containers.
+            <para></para><see cref="T:System.Exception" /><br></br><list type="bullet"><see cref="T:System.NullReferenceException" /></list></summary>
+      <param name="control">The target control.</param>
+      <returns>Location of the control relative to where it appears on the form.</returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.MouseLocation(System.Windows.Forms.Control)">
+      <summary>
+            Gets mouse location relative to the parent form. It returns <see cref="F:System.Drawing.Point.Empty" /> if the mouse is outside the form.
+            <para></para><see cref="T:System.Exception" /><br></br><list type="bullet"><see cref="T:System.ArgumentNullException" /></list></summary>
+      <param name="control">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.InnerMouseLocation(System.Windows.Forms.Control)">
+      <summary>
+            Gets mouse location of a control relative to itself. This is the position of the mouse pointer within the control. If the mouse pointer is outside the control then it returns -1 (both X and Y).
+            <para></para><see cref="T:System.Exception" /><br></br><list type="bullet"><see cref="T:System.ArgumentNullException" /></list></summary>
+      <param name="control">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.SetDoubleBuffering(System.Windows.Forms.Control,System.Boolean)">
+      <summary>
+            SetDoubleBuffering(Control) enables or disables doubleBuffering for a control. Flag (true/false) tells whether to enable or disable.
+            <para></para><see cref="T:System.Exception" /><br></br><list type="bullet"><see cref="T:System.ArgumentNullException" /></list></summary>
+      <param name="control">
+      </param>
+      <param name="flag">
+      </param>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.Contains(System.String[],System.String,System.Boolean)">
+      <summary>
+            Checks whether string array has the specified item in its collection.
+            </summary>
+      <param name="strArray">source</param>
+      <param name="item">item to check</param>
+      <param name="caseSensitive">(optional) whether it is case sensitive</param>
+      <returns>returns true if the item exists in the collection.</returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.CopyPropertiesFromExcept(System.Windows.Forms.Control,System.Windows.Forms.Control,System.String[])">
+      <summary>
+            Copies properties from the specified control to this control.
+            </summary>
+      <param name="toControl">destination control</param>
+      <param name="fromControl">source control</param>
+      <param name="propertiesNotToCopy">(optional) properties to skip. Put 'null' to skip nothing.</param>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.CopyPropertiesFrom(System.Windows.Forms.Control,System.Windows.Forms.Control,System.String[])">
+      <summary>
+            Copies specified properties from the specified control to this control.
+            </summary>
+      <param name="toControl">destination control</param>
+      <param name="fromControl">source control</param>
+      <param name="propertiesToCopy">properties to copy</param>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.SetProperty(System.Object,System.String,System.Object)">
+      <summary>
+            Sets property to an object.
+            </summary>
+      <param name="obj">target object</param>
+      <param name="propertyName">target property name</param>
+      <param name="value">target property value</param>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.GetProperty(System.Object,System.String)">
+      <summary>
+            Gets property value of an object.
+            </summary>
+      <param name="obj">target object</param>
+      <param name="propertyName">target property</param>
+      <returns>Value of the property as an object.</returns>
+    </member>
+    <member name="M:SaaUI.SaaExtensions.ToList(System.String[])">
+      <summary>
+            Converts string array to List.
+            </summary>
+      <param name="strArray">string array to convert</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:SaaUI.Properties.iOS">
+      <summary>
+            iOS style options
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.Radius">
+      <summary>
+            Gets or Sets radius of the iOS toggle. This to work, <see cref="P:SaaUI.Properties.iOS.RadiusStyle" /> should be set to 'Custom'.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.HeadRadius">
+      <summary>
+            Gets or Sets radius of the iOS toggle head. This to work, <see cref="P:SaaUI.Properties.iOS.RadiusStyle" /> should be set to 'Custom'.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.Offset">
+      <summary>
+            Gets or Sets how the far the iOS Toggle should move from left (X) and from top (Y).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.OnHeadOffset">
+      <summary>
+            Gets or Sets how the far the iOS Toggle head should move from left (X) and from top (Y) when it is ON (Checked = true).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.OffHeadOffset">
+      <summary>
+            Gets or Sets how the far the iOS Toggle head should move from left (X) and from top (Y) when it is OFF (Checked = false).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.OffSize">
+      <summary>
+            Gets or Sets extra empty height and width to be added to the iOS toggle.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.HeadOffSize">
+      <summary>
+            Gets or Sets extra height and width to be added to the iOS toggle head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.RadiusStyle">
+      <summary>
+            Gets or Sets whether the radius of the iOS toggle is round or custom.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.iOS.Speed">
+      <summary>
+            Gets or Sets animation speed of the iOS toggle.
+            </summary>
+    </member>
+    <member name="T:SaaUI.Properties.Flat">
+      <summary>
+            Flat style options
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.Radius">
+      <summary>
+            Gets or Sets radius of the flat toggle. This to work, <see cref="P:SaaUI.Properties.Flat.RadiusStyle" /> should be set to 'Custom'.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.HeadRadius">
+      <summary>
+            Gets or Sets head radius of the flat toggle. This to work, <see cref="P:SaaUI.Properties.Flat.RadiusStyle" /> should be set to 'Custom'.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.Offset">
+      <summary>
+            Gets or Sets how far the flat toggle will move from left(X) and from top(Y).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.OnHeadOffset">
+      <summary>
+            Gets or Sets how far the flat toggle head will move from left(X) and from top(Y) when it is ON (Checked = true).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.OffHeadOffset">
+      <summary>
+            Gets or Sets how far the flat toggle head will move from left(X) and from top(Y) when it is OFF (Checked = false).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.OffSize">
+      <summary>
+            Gets or Sets extra empty height or width to be added to the flat toggle.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.HeadOffSize">
+      <summary>
+            Gets or Sets extra height or width to be added to the flat toggle head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.RadiusStyle">
+      <summary>
+            Gets or Sets whether radius of the flat toggle is rounded or custom.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.HeadColorType">
+      <summary>
+            Gets or Sets whether the flat toggle head will take the color of the 'BackColor' or 'HeadColor'.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.Speed">
+      <summary>
+            Gets or Sets the animation speed of the flat toggle.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Flat.Border">
+      <summary>
+            Gets or Sets the thickness of the flat toggle border.
+            </summary>
+    </member>
+    <member name="T:SaaUI.Properties.Skewed">
+      <summary>
+            Skewed style options
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Skewed.Coordinates">
+      <summary>
+            Gets or Sets coordinates of the skewed style. These coordinates dictate how Skewed toggle is drawn.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Skewed.OffSet">
+      <summary>
+            Gets or Sets how far the toggle should move from left to right and from top to bottom. X and Y respectively.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Skewed.OnText">
+      <summary>
+            Gets or Sets Text of the skewed toggle when it is ON (Checked = true).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Skewed.OffText">
+      <summary>
+            Gets or Sets Text of the skewed toggle when it is OFF (Checked = false).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Skewed.OffFont">
+      <summary>
+            Gets or Sets Font of the skewed toggle when it is OFF (Checked = false).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Skewed.OnFont">
+      <summary>
+            Gets or Sets Font of the skewed toggle when it is ON (Checked = true).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Skewed.SizeOffSet">
+      <summary>
+            Gets or Sets extra height to be added to the skewed toggle.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Skewed.Speed">
+      <summary>
+            Gets or Sets animation speed of the skewed toggle.
+            </summary>
+    </member>
+    <member name="T:SaaUI.Properties.SaaToggleColors">
+      <summary>
+            SaaToggle Color options
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.SaaToggleColors.OnBackColor">
+      <summary>
+            Gets or Sets Toggle background color when it is ON (Checked = true).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.SaaToggleColors.OffBackColor">
+      <summary>
+            Gets or Sets Toggle background color when it is OFF (Checked = false).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.SaaToggleColors.OnHeadColor">
+      <summary>
+            Gets or Sets Toggle head (for iOS and Flat styles) color when it is ON (Checked =true).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.SaaToggleColors.OffHeadColor">
+      <summary>
+            Gets or Sets Toggle head (for iOS and Flat styles) color when it is OFF (Checked = false).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.SaaToggleColors.OnForeColor">
+      <summary>
+            Gets or Sets Toggle text color (for Skewed style) when it is ON (Checked = true).
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.SaaToggleColors.OffForeColor">
+      <summary>
+            Gets or Sets Toggle text color (for Skewed style) when it is OFF (Checked = false).
+            </summary>
+    </member>
+    <member name="T:SaaUI.Properties.ToggleSkewedCoordinates">
+      <summary>
+            These are coordinates dictating how Skewed toggle is drawn.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.ToggleSkewedCoordinates.TopLeft">
+      <summary>
+            Gets or Sets Top Left XY coordinates
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.ToggleSkewedCoordinates.TopRight">
+      <summary>
+            Gets or Sets Top Right XY coordinates
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.ToggleSkewedCoordinates.BottomRight">
+      <summary>
+            Gets or Sets Bottom Right XY coordinates
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.ToggleSkewedCoordinates.BottomLeft">
+      <summary>
+            Gets or Sets Bottom Left XY coordinates
+            </summary>
+    </member>
+    <member name="T:SaaUI.Properties.Resources">
+      <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.ResourceManager">
+      <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Culture">
+      <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.ActiveArrowUp_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.ArrowDown_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.controlbutton_close">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.controlbutton_maxres">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.controlbutton_min">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.controlbutton_normal">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Entypo_e78b_0__32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Entypo_e78d_0__32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.GripNormal">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_Checked_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_Collapse_Arrow_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_InActiveClose_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_Lock_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_macos_close_90_Active">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_macos_close_90_inActive">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_macos_maximize_90_Active">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_macos_maximize_90_inActive">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_macos_minimize_90_Active">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_macos_minimize_90_inActive">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_Multiply_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_Ok_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_User_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.icons8_UserInActive_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.InActiveArrowDown_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.InActiveArrowUp_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Min_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.mini">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.mini1">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Minimize_16">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Minimize_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Rectangle_16">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Rectangle_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Roboto_Medium">
+      <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.Roboto_Regular">
+      <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.SaaToast">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.ScrollBarArrowDown">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.titlebar">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.titlebarunfocused">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.titlebarunfocused1">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.X_16">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="P:SaaUI.Properties.Resources.X_32">
+      <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+    </member>
+    <member name="F:SaaUI.SaaCircularProgressDisplayValue.Value">
+      <summary>
+            Value is displayed in the CircularProgress
+            </summary>
+    </member>
+    <member name="F:SaaUI.SaaCircularProgressDisplayValue.Percent">
+      <summary>
+            Percentage is displayed in the CircularProgress.
+            </summary>
+    </member>
+    <member name="F:SaaUI.SaaCircularProgressDisplayValue.None">
+      <summary>
+            Nothing is displayed in the CircularProgress except <see cref="P:SaaUI.SaaCircularProgress.Prefix" /> and <see cref="P:SaaUI.SaaCircularProgress.Suffix" /></summary>
+    </member>
+    <member name="T:SaaUI.SaaAccordion">
+      <summary>
+            A collapsible panel that orginizes items and controls.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaAccordion.ExpandChanged">
+      <summary>
+            Fires after the accordion is expanded or collapsed.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaAccordion.ExpandChanging">
+      <summary>
+            Fires before the accordion starts expanding or collapsing.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaAccordion.Animating">
+      <summary>
+            Fires as the accordion is expanding or collapsing. This event will be fired several times each collapse or expand.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaAccordion.HeadHover">
+      <summary>
+            Fires when mouse pointer is over the head of the accordion.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaAccordion.HeadHoverLeave">
+      <summary>
+            Fires when mouse pointer leaves the head of the accordion.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.Items">
+      <summary>
+            Gets Controls this Accordion hosts
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.ContentPanel">
+      <summary>
+            Gets the body panel of this accordion.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.Expanding">
+      <summary>
+            Gets whether the control is expanding. <c>true</c> if the control is expanding, otherwise <c>false</c></summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.Collapsing">
+      <summary>
+            Gets whether the control is collapsing. <c>true</c> if the control is collapsing, otherwise <c>false</c></summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.IntervalInMilliseconds">
+      <summary>
+            Gets or Sets interval in milliseconds of the animation.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.MouseClicks">
+      <summary>
+            Gets or Sets which mouse button click does this control accept.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadSize">
+      <summary>
+            Gets or Sets the size of the head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadOffSet">
+      <summary>
+            Gets or Sets how far will the head move from left and  top.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadOffSize">
+      <summary>
+            Gets or Sets extra height and width to be added to the head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadShadow">
+      <summary>
+            Gets the shadow of the head. The shadow is <c>typeof</c><seealso cref="T:SaaUI.SaaShadow" />.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.Expand">
+      <summary>
+            Gets or Sets whether to accordion is expanded. <c>true</c> if expanded, otherwife <c>false</c></summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.Speed">
+      <summary>
+            Gets or Sets the speed of the animation when expanding or collapsing. '0' means defualt animation speed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.BodyRadius">
+      <summary>
+            Gets or Sets radius of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.BodyColor">
+      <summary>
+            Gets or Sets background color of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadBackColor">
+      <summary>
+            Gets or Sets background color of the head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadHoverBackColor">
+      <summary>
+            Gets or Sets background color of the head when mouse pointer is over it.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadExpandedRadius">
+      <summary>
+            Gets or Sets radius of the head when it expanded.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadCollapsedRadius">
+      <summary>
+            Gets or Sets radius of the head when it collapsed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadRightImage">
+      <summary>
+            Gets or Sets right head image icon.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadLeftImage">
+      <summary>
+            Gets or Sets left head image icon.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadLeftImageVisible">
+      <summary>
+            Gets or Sets whether left head image icon is visible.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadRightImageVisible">
+      <summary>
+            Gets or Sets whether right head image icon is visible.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadRightImageSizeMode">
+      <summary>
+            Gets or Sets right head image icon sizing mode.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadLeftImageSizeMode">
+      <summary>
+            Gets or Sets left head image icon sizing mode.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadText">
+      <summary>
+            Gets or Sets text of the head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadTextColor">
+      <summary>
+            Gets or Sets text color of the head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadFont">
+      <summary>
+            Gets or Sets text font of the head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.HeadTextPosition">
+      <summary>
+            Gets or Sets text alignment of the head.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.BodyMargin">
+      <summary>
+            Gets or Sets body margins of the accordion.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaAccordion.BodyPadding">
+      <summary>
+            Gets or Sets body padding of the accordion.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaAccordion.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="T:SaaUI.SaaFlatTextBox">
+      <summary>
+            Beautiful and redesigned Texbox.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlatTextBox.TextLength">
+      <summary>
+            Gets number of characters contained in the text of the control
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlatTextBox.BorderColor">
+      <summary>
+            Gets or Sets border color of the textbox.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlatTextBox.BorderActiveColor">
+      <summary>
+            Gets or Sets border color when the textbox is active and focused.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlatTextBox.Border">
+      <summary>
+            Gets or Sets whether border is drawn on the textbox.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaButton">
+      <summary>
+            Beautiful  and customizable saaButton.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaButton.PerformClick">
+      <summary>
+            Creates a virtual click for the button. It is similar if the user has clicked the button.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.Icon">
+      <summary>
+            Gets or Sets the icon of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.IconSize">
+      <summary>
+            Gets or Sets the size of the icon.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.IconOffsetX">
+      <summary>
+            Gets or Sets in pixels, how far the icon is from the left side.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.IconOffsetY">
+      <summary>
+            Gets or Sets in pixels, how far the icon is from top.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.TextOffsetX">
+      <summary>
+            Gets or Sets in pixels, how far the text is from the left side.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.TextOffsetY">
+      <summary>
+            Gets or Sets in pixels, how far the text is from top.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.Value">
+      <summary>
+            Gets or Sets associated text with this control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.ClickColor1">
+      <summary>
+            Gets or Sets first Click Color of the LinearGradient. This is when mouse pointer is over the control and mouse button is pressed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.ClickColor2">
+      <summary>
+            Gets or Sets second Click Color of the LinearGradient. This is when mouse pointer is over the control and mouse button is pressed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.HoverColor1">
+      <summary>
+            Gets or Sets first Hover Color of the LinearGradient. This is when mouse pointer is over the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.HoverColor2">
+      <summary>
+            Gets or Sets second Hover Color of the LinearGradient. This is when mouse pointer is over the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.BackColor">
+      <summary>
+            Gets or Sets first BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.Radius">
+      <summary>
+            Gets or Sets the border radius of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.Border">
+      <summary>
+            Gets or Sets border thickness of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.BorderColor">
+      <summary>
+            Gets or Sets first color of the border color gradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.BorderColor2">
+      <summary>
+            Gets or Sets first second of the border color gradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.BorderColorAngle">
+      <summary>
+            Gets or Sets at which angle the color gradients will meet.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.EnableDoubleBuffering">
+      <summary>
+            Gets or Sets whether to enable double buffering for this control
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.BackColor2">
+      <summary>
+            Gets or Sets second BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaButton.BackColorAngle">
+      <summary>
+            Gets or Sets angle of BackColor and BackColor2 on the control.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaCard">
+      <summary>
+            Beautiful and customizable saaCard.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCard.Radius">
+      <summary>
+            Gets or Sets the border radius of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCard.Border">
+      <summary>
+            Gets or Sets border thickness of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCard.BorderColor">
+      <summary>
+            Gets or Sets first color of the border color gradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCard.BorderColor2">
+      <summary>
+            Gets or Sets first second of the border color gradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCard.BorderColorAngle">
+      <summary>
+            Gets or Sets at which angle the color gradients will meet.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCard.BackColor2">
+      <summary>
+            Gets or Sets second BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCard.BackColorAngle">
+      <summary>
+            Gets or Sets angle of BackColor and BackColor2 on the control.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaCard.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="T:SaaUI.SaaChatBubble">
+      <summary>
+            Beautiful and customizable saaChatBubble.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaChatBubble.BodyClicked">
+      <summary>
+            Fires when body of the control is clicked.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaChatBubble.ImageClicked">
+      <summary>
+            Fires when image of the control is clicked.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaChatBubble.BodyChanged">
+      <summary>
+            Fires when text in the body gets changed.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaChatBubble.MeasureHeight(System.Boolean)">
+      <summary>
+            Gets Actual height required for the control to show its content fully.
+            </summary>
+      <param name="OnlyBody">'true' if you want to get only the text part, otherwise 'false' to get full height.</param>
+      <returns>Returns Required height for the control.</returns>
+    </member>
+    <member name="M:SaaUI.SaaChatBubble.MeasureWidth(System.Boolean)">
+      <summary>
+            Gets Actual width required for the control to show its content fully.
+            </summary>
+      <param name="OnlyBody">'true' if you want to get only the text part, otherwise 'false' to get full width.</param>
+      <returns>Returns Required width for the control.</returns>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.PeakOffX1">
+      <summary>
+            Gets or Sets offset position of X1 relative to X from point 0 of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.PeakOffY1">
+      <summary>
+            Gets or Sets offset position of Y1 relative to Y from point 0 of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.PeakOffX2">
+      <summary>
+            Gets or Sets offset position of X2 relative to X from point 0 of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.PeakOffY2">
+      <summary>
+            Gets or Sets offset position of Y2 relative to Y from point 0 of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.PeakOffX3">
+      <summary>
+            Gets or Sets offset position of X3 relative to X from point 0 of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.PeakOffY3">
+      <summary>
+            Gets or Sets offset position of Y3 relative to Y from point 0 of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.Peak">
+      <summary>
+            Gets or Sets whether peak of the bubble to be drawn.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.PeakPosition">
+      <summary>
+            Gets or Sets where peak of the bubble to be drawn.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.ImagePosition">
+      <summary>
+            Gets or Sets image position of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.ProfilePosition">
+      <summary>
+            Gets or Sets profile position of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.Profile">
+      <summary>
+            Gets or Sets whether profile of the bubble to be shown.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.ImageRadius">
+      <summary>
+            Gets or Sets radius of the image. To make it full circle, equalize both height and width of the image and give radius of half the height.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.ProfileSize">
+      <summary>
+            Gets or Sets size of the profile of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.MsgBackground">
+      <summary>
+            Gets or Sets background color of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.TextAlign">
+      <summary>
+            Gets or Sets text alignment of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.RightToLeftRTL">
+      <summary>
+            Gets or Sets whether text will be right to left for RTL languages.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.Body">
+      <summary>
+            Gets or Sets body text of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.BodyPadding">
+      <summary>
+            Gets or Sets body padding of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.Radius">
+      <summary>
+            Gets or Sets radius of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.Image">
+      <summary>
+            Gets or Sets image of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.ImageSizeMode">
+      <summary>
+            Gets or Sets image sizing mode of the image of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.ImageBorderThickness">
+      <summary>
+            Gets or Sets image border thickness.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.ImageBackColor">
+      <summary>
+            Gets or Sets background color of the image.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatBubble.ImageBorderColor">
+      <summary>
+            Gets or Sets image border color.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaChatBubble.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="T:SaaUI.SaaCheckBox">
+      <summary>
+            Beautiful and customizable checkbox.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaCheckBox.OnCheckChanged">
+      <summary>
+            Fires when <see cref="P:SaaUI.SaaCheckBox.Checked" /> property is changed.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaCheckBox.CheckChanged">
+      <summary>
+            Fires when <see cref="P:SaaUI.SaaCheckBox.Checked" /> property is changed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BorderThickness">
+      <summary>
+            Gets or Sets border thickness of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BorderStyle">
+      <summary>
+            Gets or Sets border line style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BorderColor">
+      <summary>
+            Gets or Sets color of the border lines.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickJoints">
+      <summary>
+            Gets or Sets how tick joints are connected to each other.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickStyle">
+      <summary>
+            Gets or Sets Tick dash style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.MouseClicks">
+      <summary>
+            Gets or Sets which click the control accepts. E.g Mouse Left Click
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.OffTextX">
+      <summary>
+            Gets or Sets how many pixels the text will move from the left side.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.OffTextY">
+      <summary>
+            Gets or Sets how many pixels the text will move from up.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BoxOffset">
+      <summary>
+            Gets or Sets how many pixels the the box will move from up and left.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickOffX1">
+      <summary>
+            Gets or Sets in pixel, Tick Coordinate X1 offset. this is the start point of the tick.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickOffX2">
+      <summary>
+            Gets or Sets in pixel, Tick Coordinate X2 offset. this is the middle point of the tick where joints happen.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickOffX3">
+      <summary>
+            Gets or Sets in pixel, Tick Coordinate X3 offset. this is the end point of the tick where the end happens.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickOffY1">
+      <summary>
+            Gets or Sets in pixel, Tick Coordinate Y1 offset. this is the start point of the tick.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickOffY2">
+      <summary>
+            Gets or Sets in pixel, Tick Coordinate Y2 offset. this is the middle point of the tick where joints happen.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickOffY3">
+      <summary>
+            Gets or Sets in pixel, Tick Coordinate Y3 offset. this is the end point of the tick where the end happens.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.Radius">
+      <summary>
+            Gets or Sets The radius of the box. The roundness of the egdes.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.Checked">
+      <summary>
+            Gets or Sets whether tick is Checked. returns TRUE if checked otherwise FALSE.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickPath">
+      <summary>
+            Gets or Sets whether tick placeholder is visible when unchecked.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.AutoResize">
+      <summary>
+            Gets or Sets whether the control will take the size of its content than the defined size.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickThickness">
+      <summary>
+            Gets or Sets the thickness of the tick.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickColor">
+      <summary>
+            Gets or Sets the color of the tick.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.TickPathColor">
+      <summary>
+            Gets or Sets the color of the tick path. The tick placeholder.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BoxColor">
+      <summary>
+            Gets or Sets the color of the box.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BoxColor2">
+      <summary>
+            Gets or Sets the second color of the box.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BoxColorAngle">
+      <summary>
+            Gets or Sets angle of BackColor and BackColor2 on the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.Text">
+      <summary>
+            Gets or Sets Text associated with the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BoxHeight">
+      <summary>
+            Gets or Sets height the box.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCheckBox.BoxWidth">
+      <summary>
+            Gets or Sets width the box.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaCircularProgress">
+      <summary>
+            Beautifully designed and customizable SaaCircularProgress.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaCircularProgress.OnValueChanged">
+      <summary>
+            Fires when the <see cref="P:SaaUI.SaaCircularProgress.Value" /> of the CircularProgress is changed
+            </summary>
+      <param name="sender">object of type <see cref="T:SaaUI.SaaCircularProgress" /></param>
+      <param name="e">
+      </param>
+    </member>
+    <member name="E:SaaUI.SaaCircularProgress.ValueChanged">
+      <summary>
+            Fires when the <see cref="P:SaaUI.SaaCircularProgress.Value" /> of the CircularProgress is changed
+            <para>TIP: You can get the the new value from <see cref="P:SaaUI.SaaCircularProgress.Value" /> or as percentage <see cref="P:SaaUI.SaaCircularProgress.Percentage" /></para></summary>
+    </member>
+    <member name="M:SaaUI.SaaCircularProgress.PerformStep">
+      <summary>
+            Increments value of the CircularProgress by the value specified in <see cref="P:SaaUI.SaaCircularProgress.Step" /></summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Path">
+      <summary>
+            Gets or Sets whether to show the path of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.PathColor">
+      <summary>
+            Gets or Sets path color of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.PathDepth">
+      <summary>
+            Gets or Sets path depth of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.PathDashCap">
+      <summary>
+            Gets or Sets path dash cap of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.PathDashStyle">
+      <summary>
+            Gets or Sets path dash style of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Percentage">
+      <summary>
+            Gets Percentage value of the CircularProgress. Decimal points is determined by <see cref="P:SaaUI.SaaCircularProgress.DecimalPoints" /></summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.SpeedInMilliSeconds">
+      <summary>
+            Gets or Sets speed of the rotation in milliseconds.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.RotateStep">
+      <summary>
+            Gets or Sets steps taken when the CircularProgress is rotating.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Circulate">
+      <summary>
+            Gets or Sets whether the CircularProgress will rotate.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.ReverseCirculate">
+      <summary>
+            Gets or Sets whether the CircularProgress will rotate in reverse direction.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Reverse">
+      <summary>
+            Gets or Sets whether the CircularProgress value will be incremented/decremented in reverse direction.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Display">
+      <summary>
+            Gets or Sets how text is displayed in the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Prefix">
+      <summary>
+            Gets or Sets text put before Value/Percent/None text displayed in the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Suffix">
+      <summary>
+            Gets or Sets text put after Value/Percent/None text displayed in the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.DecimalPoints">
+      <summary>
+            Gets or Sets how many decimal points will be displayed in the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Step">
+      <summary>
+            Amount to increment current value of the control when called <see cref="M:SaaUI.SaaCircularProgress.PerformStep" />.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Value">
+      <summary>
+            Gets or Sets current value of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Maximum">
+      <summary>
+            Gets or Sets maximum value of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Minimum">
+      <summary>
+            Gets or Sets minimum value of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.StartAngle">
+      <summary>
+            Gets or Sets start angle. It should be between 0 to 360.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.DashOffset">
+      <summary>
+            Gets or Sets distance from the start of a line to the start of a dash pattern.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.DashCap">
+      <summary>
+            Gets or Sets dash cap of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.DashStyle">
+      <summary>
+            Gets or Sets dash style of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.LineStart">
+      <summary>
+            Gets or Sets start cap of the line of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.LineEnd">
+      <summary>
+            Gets or Sets end cap the of the line of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Color">
+      <summary>
+            Gets or Sets color of the CircularProgress.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCircularProgress.Depth">
+      <summary>
+            Gets or Sets width of the CircularProgress.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaCircularProgress.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="T:SaaUI.SaaCustomTextBox">
+      <summary>
+            Beautifully designed and customizable custom SaaTextBox.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaCustomTextBox.OnImageClick">
+      <summary>
+            Event raised when image on the control is clicked.
+            </summary>
+      <param name="sender">object of type <see cref="T:SaaUI.SaaPictureBox" /></param>
+      <param name="e">
+        <see cref="T:System.EventArgs" />
+      </param>
+    </member>
+    <member name="E:SaaUI.SaaCustomTextBox.TextChanged">
+      <summary>
+            Fires when text of the control is changed.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaCustomTextBox.ImageClick">
+      <summary>
+            Event raised when image on the control is clicked.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.Cursor">
+      <summary>
+            Gets or Sets  cursor of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.ImageCursor">
+      <summary>
+            Gets or Sets image cursor of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.ImageSizeMode">
+      <summary>
+            Gets or Sets image sizing mode of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.Image">
+      <summary>
+            Gets or Sets image of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.ImagePosition">
+      <summary>
+            Gets or Sets image position of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.ActiveImage">
+      <summary>
+            Gets or Sets image when control is active.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.InActiveImage">
+      <summary>
+            Gets or Sets image when control is inactive.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.InActiveTextColor">
+      <summary>
+            Gets or Sets text color when control is inactive.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.ActiveTextColor">
+      <summary>
+            Gets or Sets text color when control is active.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.LineSize">
+      <summary>
+            Gets or Sets size of the line.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.LineActiveColor">
+      <summary>
+            Gets or Sets line color when the control is active.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.LineImage">
+      <summary>
+            Gets or Sets whether the image of the control will also be underlined.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.LineInActiveColor">
+      <summary>
+            Gets or Sets line color when the control is inactive.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.Line">
+      <summary>
+            Gets or Sets whether to show the line.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.WordWrap">
+      <summary>
+            Gets or Sets whether to allow wordwrapping.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.Password">
+      <summary>
+            Gets or Sets whether this control will behave like password textbox.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.TextAlign">
+      <summary>
+            Gets or Sets text alignment of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.TextLength">
+      <summary>
+            Gets or Sets current text length.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.PasswordChar">
+      <summary>
+            Gets or Sets character will be used as password display.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.HideSelection">
+      <summary>
+            Gets or Sets whether to hide selection.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.BackColor">
+      <summary>
+            Gets or Sets background color of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.Value">
+      <summary>
+            Gets or Sets Text of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.WatermarkText">
+      <summary>
+            Gets or Sets watermarkText.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.WatermarkActiveColor">
+      <summary>
+            Gets or Sets Watermark color when control is active.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.WatermarkColor">
+      <summary>
+            Gets or Sets Watermark color.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaCustomTextBox.WatermarkFont">
+      <summary>
+            Gets or Sets watermark font.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaCustomTextBox.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="P:SaaUI.SaaFlowLayoutPanel.Radius">
+      <summary>
+            Gets or Sets the border radius of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlowLayoutPanel.Border">
+      <summary>
+            Gets or Sets border thickness of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlowLayoutPanel.BorderColor">
+      <summary>
+            Gets or Sets first color of the border color gradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlowLayoutPanel.BorderColor2">
+      <summary>
+            Gets or Sets first second of the border color gradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlowLayoutPanel.BorderColorAngle">
+      <summary>
+            Gets or Sets at which angle the color gradients will meet.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlowLayoutPanel.BackColor2">
+      <summary>
+            Gets or Sets second BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFlowLayoutPanel.BackColorAngle">
+      <summary>
+            Gets or Sets angle of BackColor and BackColor2 on the control.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaFormControlBox">
+      <summary>
+            Customizable controlbox for forms.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.ControlToolTip">
+      <summary>
+            Gets Tooltip control associated with this ControlBox.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.CloseInActive">
+      <summary>
+            Gets or Sets Image for Close button when inactive
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.CloseActive">
+      <summary>
+            Gets or Sets Image for Close button when active
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.MinimizeInActive">
+      <summary>
+            Gets or Sets Image for Minimize button when inactive
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.MinimizeActive">
+      <summary>
+            Gets or Sets Image for Minimize button when active
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.MaximizeInActive">
+      <summary>
+            Gets or Sets Image for Maximize button when inactive
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.MaximizeActive">
+      <summary>
+            Gets or Sets Image for Maximize button when active
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.CloseTip">
+      <summary>
+            Gets or Sets Tooltip for Close button
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.MinimizeTip">
+      <summary>
+            Gets or Sets Tooltip for Minimize button
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.MaximizeTip">
+      <summary>
+            Gets or Sets Tooltip for Maximize button
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.DisableMaximize">
+      <summary>
+            Gets or Sets whether Maximize button is disabled
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.DisableMinimize">
+      <summary>
+            Gets or Sets whether Minimize button is disabled
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.DisableClose">
+      <summary>
+            Gets or Sets whether Minimize button is disabled
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.ShowClose">
+      <summary>
+            Gets or Sets whether Close button is hidden
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.ShowMinimize">
+      <summary>
+            Gets or Sets whether Minimize button is hidden
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaFormControlBox.ShowMaximize">
+      <summary>
+            Gets or Sets whether Maximize button is hidden
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaGlowing">
+      <summary>
+            Shows glowing animations informing user that there is a process going on.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaGlowing.Color">
+      <summary>
+            Gets or Sets the color of the glowing point.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaGlowing.GrowingSpeed">
+      <summary>
+            Gets or Sets in milliseconds, the time it takes the glow to grow. The bigger the number the slower the growth.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaGlowing.Stop">
+      <summary>
+            Gets or Sets whether the growing is stopped.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaGlowing.ForceTransparence">
+      <summary>
+            Gets or Sets whether the control will be forced to have opacity 0. PLEASE TURN OFF THIS OPTION, IT WILL HAVE CATASTROPHIC IMPACT ON THE PERFORMANCE.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaIntroTip">
+      <summary>
+            User guide introduction tip. Helps you introduce users to your application.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaIntroTip.TargetClicking">
+      <summary>
+            Fires when user starts clicking the target control.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaIntroTip.Clicking">
+      <summary>
+            Fires when user starts clicking anywhere on the introtip including the target control.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaIntroTip.TargetClicked">
+      <summary>
+            Fires when user clicks the target control.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaIntroTip.Clicked">
+      <summary>
+            Fires when user clicks anywhere on the introtip including the target control.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaIntroTip.TargetHover">
+      <summary>
+            Fires when the mouse pointer is over the target control.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaIntroTip.Hover">
+      <summary>
+            Fires when the mouse pointer is over anywhere on the introtip including the target control.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaIntroTip.TargetLeaveHover">
+      <summary>
+            Fires when the mouse pointer leaves the target control.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaIntroTip.LeaveHover">
+      <summary>
+            Fires when the mouse pointer leaves the introtip.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.GetTip(System.Windows.Forms.Control)">
+      <summary>
+            Gets the tip text of a control
+            </summary>
+      <param name="control">target control</param>
+      <returns>returns tip text</returns>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.SetTip(System.Windows.Forms.Control,System.String)">
+      <summary>
+            Sets introtip to control. The <paramref name="SortIndex" /> will be 0.
+            </summary>
+      <param name="control">
+      </param>
+      <param name="tip">
+      </param>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.SetTip(System.Windows.Forms.Control,System.String,System.Int32)">
+      <summary>
+            Sets introtip to control with The <paramref name="SortIndex" /> specified.
+            </summary>
+      <param name="control">Target control</param>
+      <param name="tip">Tip text</param>
+      <param name="SortIndex">Position of the control in the introtip</param>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.SetSortIndex(System.Windows.Forms.Control,System.Int32)">
+      <summary>
+            Sets control to the specified SortIndex in the introtip.
+            </summary>
+      <param name="control">t=Target control</param>
+      <param name="sortIndex">Position of the control in the introtip.</param>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.GetSortIndex(System.Windows.Forms.Control)">
+      <summary>
+            Gets the SortIndex of the specified control in the introtip.
+            </summary>
+      <param name="control">Target Control</param>
+      <returns>returns the SortIndex.</returns>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.IsTarget(System.Drawing.Point,System.Boolean)">
+      <summary>
+            Indicates whether the specified point is the location of the target control.
+            </summary>
+      <param name="point">Point to check</param>
+      <param name="includeOffset">If the target offset will also be recognized as the target point.</param>
+      <returns>true if the specified point is the target, otherwise false</returns>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.IsTarget(System.Int32,System.Int32,System.Boolean)">
+      <summary>
+            Indicates whether the specified point is the location of the target control.
+            </summary>
+      <param name="x">point X</param>
+      <param name="y">Point Y</param>
+      <param name="includeOffset">If the target offset will also be recognized as the target point.</param>
+      <returns>true if the specified point is the target, otherwise false</returns>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.Show(System.Windows.Forms.Control,System.String)">
+      <summary>
+            Shows the introtip on the specified control.
+            </summary>
+      <param name="target">Target control</param>
+      <param name="tip">Text to display.</param>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.ShowAll">
+      <summary>
+            Starts displaying introtip for all controls that has tip text set. It will start from the lowest SortIndex.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.ShowAll(System.Int32)">
+      <summary>
+            Starts displaying introtip for all controls that has tip text set, starting from the specified SortIndex and going up. If the SortIndex doesn't exist, nothing will be displayed.
+            </summary>
+      <param name="fromSortIndex">SortIndex to start from. If the SortIndex doesn't exist, nothing will be displayed.</param>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.ShowNext">
+      <summary>
+            Jumps to the next control if there is introtip going on or was going on but dismissed with <see cref="M:SaaUI.SaaIntroTip.Hide" />.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.Hide">
+      <summary>
+            Dismisses and suspends the introtip. You can continue with <see cref="M:SaaUI.SaaIntroTip.ShowNext" />.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.Hide(System.Boolean)">
+      <summary>
+            Dismisses and resets the introtip.
+            </summary>
+      <param name="reset">Whether to reset the introtip. if true, then <see cref="M:SaaUI.SaaIntroTip.ShowNext" /> will not work.</param>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.CurrentControl">
+      <summary>
+            Gets the current control the introtip is showing the user.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.CanResume">
+      <summary>
+            Indicates whether there is suspended introtip that was going on and can be resumed using <see cref="M:SaaUI.SaaIntroTip.ShowNext" />. 
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.NextTrigger">
+      <summary>
+            Gets or Sets if ShowNext() is triggered when target or/and the introtip is clicked.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.MouseClicks">
+      <summary>
+            Gets or Sets which mouse clicks does the introtip accept.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.TargetCursor">
+      <summary>
+            Gets or Sets cursor of the target region.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.Cursor">
+      <summary>
+            Gets or Sets cursor of the introtip.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.TextOffset">
+      <summary>
+            Gets or Sets text offset of the introtip.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.ArrowThickness">
+      <summary>
+            Gets or Sets the width or the thickness of the arrow.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.ArrowColor">
+      <summary>
+            Gets or Sets arrow color.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.ArrowHeight">
+      <summary>
+            Gets or Sets the height of the arrow.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.ArrowBend">
+      <summary>
+            Gets or Sets how much the arrow should bend.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.ArrowOffset">
+      <summary>
+            Gets or Sets arrow offset.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.ArrowHeadStyle">
+      <summary>
+            Gets or Sets arrow head style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.ArrowTailStyle">
+      <summary>
+            Gets or Sets arrow tail style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.ArrowLineStyle">
+      <summary>
+            Gets or Sets arrow line style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.TargetBackColor">
+      <summary>
+            Gets or Sets background color of the target region.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.TargetOffSet">
+      <summary>
+            Gets or Sets extra height or width to be added to the target region.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.Position">
+      <summary>
+            Gets or Sets position of the arrow and text on the introtip.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.Transparency">
+      <summary>
+            Gets or Sets transparency of the introtip.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.Radius">
+      <summary>
+            Gets or Sets the radius of the target region.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.Border">
+      <summary>
+            Gets or Sets target region border thickness. '0' means no border.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.BorderColor">
+      <summary>
+            Gets or Sets target region border color.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.BorderStyle">
+      <summary>
+            Gets or Sets target region border style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.BackColor">
+      <summary>
+            Gets or Sets background color of the introtip.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.Font">
+      <summary>
+            Gets or Sets introtip font.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaIntroTip.TextColor">
+      <summary>
+            Gets or Sets color of the text.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaIntroTip.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="P:SaaUI.IntroTipClickEventArgs.TargetControl">
+      <summary>
+            Target control that is associated with the current introtip firing this event.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipClickEventArgs.Tip">
+      <summary>
+            Tip text of the target control that is associated with the current introtip firing this event.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipClickEventArgs.SortIndex">
+      <summary>
+            SortIndex of the target control that is associated with the current introtip firing this event.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipClickEventArgs.MouseButtons">
+      <summary>
+            Mouse button that is clicked
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipClickEventArgs.RelativeLocationToForm">
+      <summary>
+            Location of the target control relative to the main form.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipClickEventArgs.Location">
+      <summary>
+            Location of the target control relative to its parent container.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipClickEventArgs.MouseLocation">
+      <summary>
+            Location of the mouse pointer on the target control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipClickEventArgs.IsTarget">
+      <summary>
+            Indicates whether the location clicked is the location of the target control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipHoverEventArgs.MouseLocation">
+      <summary>
+            Location of the mouse pointer on the target control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipHoverEventArgs.TargetControl">
+      <summary>
+            Target control that is associated with the current introtip firing this event.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipHoverEventArgs.Tip">
+      <summary>
+            Tip text of the target control that is associated with the current introtip firing this event.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipHoverEventArgs.SortIndex">
+      <summary>
+            SortIndex of the target control that is associated with the current introtip firing this event.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipHoverEventArgs.RelativeLocationToForm">
+      <summary>
+            Location of the target control relative to the main form.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipHoverEventArgs.Location">
+      <summary>
+            Location of the target control relative to its parent container.
+            </summary>
+    </member>
+    <member name="P:SaaUI.IntroTipHoverEventArgs.IsTarget">
+      <summary>
+            Indicates whether the location clicked is the location of the target control.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaLine">
+      <summary>
+            Very customizable Saaline.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.Transparent">
+      <summary>
+            Gets or Sets line outer body transparency
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.LineAlignment">
+      <summary>
+            Gets or Sets alignment of the line in the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.CustomLineAlignment">
+      <summary>
+            Gets or Sets custom alignment of the line.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.StartEdge">
+      <summary>
+            Gets or Sets distance between the line start point and the edge of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.EndEdge">
+      <summary>
+            Gets or Sets distance between the line end point and the edge of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.DashOffset">
+      <summary>
+            Gets or Sets distance from the start of a line to the start of a dash pattern.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.DashCap">
+      <summary>
+            Gets or Sets dash cap of the line.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.DashStyle">
+      <summary>
+            Gets or Sets dash style of the line.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.LineStart">
+      <summary>
+            Gets or Sets start cap of the line.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.LineEnd">
+      <summary>
+            Gets or Sets end cap of the line.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.LineColor">
+      <summary>
+            Gets or Sets color of the line.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaLine.Vertical">
+      <summary>
+            Gets or Sets whether the line is vertical(true) or horizontal(false).
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.ForceDrawRegion">
+      <summary>
+            Gets or Sets whether the panel's region is hard drawn or soft drawn.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.BackColor">
+      <summary>
+            Gets or Sets first BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.Transparence">
+      <summary>
+            Gets or Sets transparency pacentage of the panel.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.ColorType">
+      <summary>
+            Gets or Sets whether the background of the panel is gradient or solid. Default is solid. For better performance let it be Default(Solid).
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.Radius">
+      <summary>
+            Gets or Sets the border radius of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.Border">
+      <summary>
+            Gets or Sets border thickness of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.BorderColor">
+      <summary>
+            Gets or Sets first color of the border color gradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.BorderColor2">
+      <summary>
+            Gets or Sets first second of the border color gradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.BorderColorAngle">
+      <summary>
+            Gets or Sets at which angle the color gradients will meet.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.BackColor2">
+      <summary>
+            Gets or Sets second BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPanel.BackColorAngle">
+      <summary>
+            Gets or Sets angle of BackColor and BackColor2 on the control.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaPictureBox">
+      <summary>
+            Beautiful and customizable SaaPictureBox.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaPreloader">
+      <summary>
+            Beautiful and customizable saaPreloader.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.Start">
+      <summary>
+            Gets or Sets whether the loader should start.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.Reverse">
+      <summary>
+            Gets or Sets whether the preloader will go in the reverse direction.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.SpeedInMilliSeconds">
+      <summary>
+            Gets or Sets speed of the loader in milliseconds.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.StepUp">
+      <summary>
+            Gets or Sets steps taken when the loader is going up.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.StepDown">
+      <summary>
+            Gets or Sets steps taken when the loader is going down.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.MaxAngle">
+      <summary>
+            Gets or Sets maximum angle the loader can reach. It can be between 0 to 360.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.MinAngle">
+      <summary>
+            Gets or Sets minimum angle the loader can reach. It can be between 0 to 360.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.DashOffset">
+      <summary>
+            Gets or Sets distance from the start of a line to the start of a dash pattern.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.DashCap">
+      <summary>
+            Gets or Sets dash cap of the preloader.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.DashStyle">
+      <summary>
+            Gets or Sets dash style of the preloader.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.LineStart">
+      <summary>
+            Gets or Sets start cap of the line of the preloader.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.LineEnd">
+      <summary>
+            Gets or Sets end cap the of the line of the preloader.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.LoaderColor">
+      <summary>
+            Gets or Sets color of the preloader.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaPreloader.LoaderWidth">
+      <summary>
+            Gets or Sets width of the preloader.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaPreloader.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="T:SaaUI.SaaProgressBar">
+      <summary>
+            Customizable ProgressBar with horizontal and vertical orientation support.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaProgressBar.OnValueChanged">
+      <summary>
+            Fires when the <see cref="P:SaaUI.SaaProgressBar.Value" /> of the ProgressBar is changed
+            </summary>
+      <param name="sender">object of type <see cref="T:SaaUI.SaaProgressBar" /></param>
+      <param name="e">
+      </param>
+    </member>
+    <member name="E:SaaUI.SaaProgressBar.ValueChanged">
+      <summary>
+            Fires when the <see cref="P:SaaUI.SaaProgressBar.Value" /> of the ProgressBar is changed
+            <para>TIP: You can get the the new value from <see cref="P:SaaUI.SaaProgressBar.Value" /> or as percentage <see cref="P:SaaUI.SaaProgressBar.Percentage" /></para></summary>
+    </member>
+    <member name="M:SaaUI.SaaProgressBar.PerformStep">
+      <summary>
+            Increments value of the ProgressBar by the value specified in <see cref="P:SaaUI.SaaProgressBar.Step" /></summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Percentage">
+      <summary>
+            Gets Percentage value of the ProgressBar. Decimal points is determined by <see cref="P:SaaUI.SaaProgressBar.DecimalPoints" /></summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Display">
+      <summary>
+            Gets or Sets how text is displayed in the ProgressBar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Prefix">
+      <summary>
+            Gets or Sets text put before Value/Percent/None text displayed in the ProgressBar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Suffix">
+      <summary>
+            Gets or Sets text put after Value/Percent/None text displayed in the ProgressBar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.DecimalPoints">
+      <summary>
+            Gets or Sets how many decimal points will be displayed in the ProgressBar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Step">
+      <summary>
+            Amount to increment current value of the control when called <see cref="M:SaaUI.SaaProgressBar.PerformStep" />.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.TextOffset">
+      <summary>
+            Gets or Sets how far the text should move from left to right (X) and from top to bottom (Y).
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.TextFont">
+      <summary>
+            Gets or Sets font of the text.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.TextColor">
+      <summary>
+            Gets or Sets color of the text.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Vertical">
+      <summary>
+            Gets or Sets whether the progressbar is vertical or horizontal.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.RoundedStyle">
+      <summary>
+            Gets or Sets whether the progressbar border is rounded.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Maximum">
+      <summary>
+            Gets or Sets maximum value the progressbar accepts.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Minimum">
+      <summary>
+            Gets or Sets minimum value the progressbar accepts.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Value">
+      <summary>
+            Gets or Sets the current value the progressbar is passing.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.BackgroundColor">
+      <summary>
+            Gets or Sets background color of the progressbar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaProgressBar.Color">
+      <summary>
+            Gets or Sets color of the progressbar.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaProgressBar.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="T:SaaUI.SaaScrollBar">
+      <summary>
+            Customizable scrollbar with binding option.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaScrollBar.OnValueChanged">
+      <summary>
+            Fires when the <see cref="P:SaaUI.SaaScrollBar.Value" /> of the ScrollBar is changed
+            </summary>
+      <param name="sender">object of type <see cref="T:SaaUI.SaaScrollBar" /></param>
+      <param name="e">
+      </param>
+    </member>
+    <member name="E:SaaUI.SaaScrollBar.ScrollChanged">
+      <summary>
+            Fires when the <see cref="P:SaaUI.SaaScrollBar.Value" /> of the ScrollBar is changed.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaScrollBar.OnScrollBarNeeded">
+      <summary>
+            Fires when the control owning this scrollbar needs scrollbars to be shown (becomes scrollable).
+            <br /> Use "VerticalScrollBarNeeded" and "HorizontalScrollBarNeeded" properties to know which scrollbar is needed
+            </summary>
+      <param name="sender">Control that is associated with this scrollbar<see cref="T:System.Windows.Forms.Control" /></param>
+    </member>
+    <member name="E:SaaUI.SaaScrollBar.ScrollBarNeeded">
+      <summary>
+            Fires when the control owning this scrollbar needs scrollbars to be shown (becomes scrollable).
+            <br /> Use "VerticalScrollBarNeeded" and "HorizontalScrollBarNeeded" properties to know which scrollbar is needed
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.HorizontalScrollBarNeeded">
+      <summary>
+            Returns true if horizontal scrollbar is needed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.VerticalScrollBarNeeded">
+      <summary>
+            Returns true if vertical scrollbar is needed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.MouseWheelScroll">
+      <summary>
+            Gets or Sets whether the mouse wheel will scroll the scrollbar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.Maximum">
+      <summary>
+            Gets or Sets the maximum value the scrollbar will accept.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.Minimum">
+      <summary>
+            Gets or Sets the minimum value the scrollbar will accept.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.Value">
+      <summary>
+            Gets or Sets the value or the position of the scrollbar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.Change">
+      <summary>
+            Gets or Sets amount the scrollbar will increments or decrements when non-thumb area is clicked or clicked and hold. '0' means no change.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.ChangeInterval">
+      <summary>
+            Gets or Sets in milliseconds, the interval between increments or decrements when non-thumb area is clicked and hold..
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.TargetControl">
+      <summary>
+            Gets or Sets control that is associated with the scrollbar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.BackgroundColor">
+      <summary>
+            Gets or Sets background color of the ScrollBar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.ActiveBackgroundColor">
+      <summary>
+            Gets or Sets background color of the ScrollBar when mouse pointer is over non-thumb area.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.ClickedBackgroundColor">
+      <summary>
+            Gets or Sets background color of the ScrollBar when clicked non-thumb area.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.Color">
+      <summary>
+            Gets or Sets thumb color of the ScrollBar.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.ClickedColor">
+      <summary>
+            Gets or Sets thumb color of the ScrollBar when the thumb is clicked.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.ActiveColor">
+      <summary>
+            Gets or Sets thumb color of the ScrollBar when mouse pointer is over the thumb.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.Vertical">
+      <summary>
+            Gets or Sets whether the ScrollBar is vertical or horizontal.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaScrollBar.RoundedStyle">
+      <summary>
+            Gets or Sets whether the ScrollBar border is rounded.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaScrollBar.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="T:SaaUI.SaaShadow">
+      <summary>
+            Creates a customizable shadow behind any control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.Spread">
+      <summary>
+            Gets or Sets shadow spread of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.AutoSet">
+      <summary>
+            Gets or Sets whether this shadow will take properties of the control set to.  Custom properties may need to manually set.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.OuterColor">
+      <summary>
+            Gets or Sets outermost color of the shadow.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.InnerColor">
+      <summary>
+            Gets or Sets inner color of the shadow.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.OffsetX">
+      <summary>
+            Gets or Sets how far the shadow will be moved on X-axis.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.OffsetY">
+      <summary>
+            Gets or Sets how far the shadow will be moved on Y-axis.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.OffsetHeight">
+      <summary>
+            Gets or Sets extra height to be added to the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.OffsetWidth">
+      <summary>
+            Gets or Sets extra width to be added to the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.Radius">
+      <summary>
+            Gets or Sets the border radius of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaShadow.Control">
+      <summary>
+            Gets or Sets the control that will own this shadow.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaTextBox">
+      <summary>
+            Beautiful and customizable SaaTexbox.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaTextBox.AutoSizing">
+      <summary>
+            Gets or Sets whether the control will resize its height to fit its content.
+            </summary>
+    </member>
+    <member name="T:SaaUI.DropShadow">
+      <summary>
+            Draws shadow beneath forms
+            </summary>
+    </member>
+    <member name="M:SaaUI.DropShadow.ApplyShadows(System.Windows.Forms.Form)">
+      <summary>
+            Draws shadow for specified form
+            </summary>
+      <param name="form">
+      </param>
+    </member>
+    <member name="T:SaaUI.SaaToast">
+      <summary>
+            Beautiful and customizable Notification.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaToast.OnClosed">
+      <summary>
+            Gets fired when the toast is closed.
+            </summary>
+      <param name="sender">
+      </param>
+      <param name="e">
+      </param>
+    </member>
+    <member name="E:SaaUI.SaaToast.Closed">
+      <summary>
+            Gets fired when the toast is closed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.Text">
+      <summary>
+            Gets or Sets text of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.TitleText">
+      <summary>
+            Gets or Sets Title text of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.Radius">
+      <summary>
+            Gets or Sets the border radius of the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.BackColor2">
+      <summary>
+            Gets or Sets second BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.BackColor">
+      <summary>
+            Gets or Sets BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.HeaderBackColor2">
+      <summary>
+            Gets or Sets second BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.HeaderBackColor">
+      <summary>
+            Gets or Sets BackColor of the LinearGradient.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.BodyTextFont">
+      <summary>
+            Gets or Sets Body text Font.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.BodyTextColor">
+      <summary>
+            Gets or Sets Body text color.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.TitleTextColor">
+      <summary>
+            Gets or Sets Title text color.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.TitleTextFont">
+      <summary>
+            Gets or Sets Title text font.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.TitleBackColor">
+      <summary>
+            Gets or Sets Title back color.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.TitlePadding">
+      <summary>
+            Gets or Sets distance between the title and its content.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.BodyPadding">
+      <summary>
+            Gets or Sets distance between the body and its content.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.Padding">
+      <summary>
+            Gets or Sets distance between the toast and its content.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.HeaderPadding">
+      <summary>
+            Gets or Sets distance between the header and its content.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.ClosePadding">
+      <summary>
+            Gets or Sets distance between the close and its content.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.IconPadding">
+      <summary>
+            Gets or Sets distance between the icon and its content.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.BodyBackColor">
+      <summary>
+            Gets or Sets Back color of the body.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.LoaderBackColor">
+      <summary>
+            Gets or Sets Back color of the loader.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.CloseBackColor">
+      <summary>
+            Gets or Sets Back color of the close.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.CloseActiveImage">
+      <summary>
+            Gets or Sets image when the close is active.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.CloseInActiveImage">
+      <summary>
+            Gets or Sets image when the close is inactive.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.CloseImageSizeMode">
+      <summary>
+            Gets or Sets image sizing mode of the close image. 
+             </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.IconImageSizeMode">
+      <summary>
+            Gets or Sets image sizing mode of the Icon image. 
+             </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.BackColorAngle">
+      <summary>
+            Gets or Sets angle of BackColor and BackColor2 on the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.HeaderBackColorAngle">
+      <summary>
+            Gets or Sets angle of BackColor and BackColor2 on the control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.Position">
+      <summary>
+            Gets or Sets where the toast will be placed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.LoaderPosition">
+      <summary>
+            Gets or Sets where the loader will be placed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.IconPosition">
+      <summary>
+            Gets or Sets where the icon will be placed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.ClosePosition">
+      <summary>
+            Gets or Sets where the close will be placed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.Icon">
+      <summary>
+            Gets or Sets Image of the icon.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.OffsetX">
+      <summary>
+            Gets or Sets how far the x-coordinate of the taost should be relatively to the x-coordinate of the parent.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.OffsetY">
+      <summary>
+            Gets or Sets how far the y-coordinate of the taost should be relatively to the y-coordinate of the parent.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.ClosePreviousTaost">
+      <summary>
+            Gets or Sets whether the toast will close all other toasts before it appears.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.LoaderVisible">
+      <summary>
+            Gets or Sets whether the loader is visible.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.AutoClose">
+      <summary>
+            Gets or Sets whether the toast will close when the loader finishes(even if the loader is hidden).
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.IntervalInMilliseconds">
+      <summary>
+            Gets or Sets time interval in milliseconds the loader takes in each step. The bigger the interval the longer the loader will take to complete.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.Size">
+      <summary>
+            Gets or Sets the size of the taost.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.AutoSize">
+      <summary>
+            Gets or Sets whether the toast will resize itself to display all its content. <see cref="P:SaaUI.SaaToast.Size" /> won't work if this is set to true.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.MinSize">
+      <summary>
+            Gets or Sets the minimum size of the toast.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.LoaderHeight">
+      <summary>
+            Gets or Sets height of the loader.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.OffHeight">
+      <summary>
+            Gets or Sets extra height to be added to the toast when <see cref="P:SaaUI.SaaToast.AutoSize" /> is true.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.OffWidth">
+      <summary>
+            Gets or Sets extra width to be added to the toast when <see cref="P:SaaUI.SaaToast.AutoSize" /> is true.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.StopOnHover">
+      <summary>
+            Gets or Sets whether the loader will pause when hovered.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.Movable">
+      <summary>
+            Gets or Sets whether the toast is movable.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.ShowBodyIcon">
+      <summary>
+            Gets or Sets whether the body icon will be shown.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.ShowCloseIcon">
+      <summary>
+            Gets or Sets whether the close icon will be shown.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.ShowHeader">
+      <summary>
+            Gets or Sets whether the header will be shown.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.ShowTitle">
+      <summary>
+            Gets or Sets whether the title will be shown.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToast.ShowBody">
+      <summary>
+            Gets or Sets whether the body will be shown.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaToast.Show">
+      <summary>
+            Displays toast on the screen.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaToast.Close">
+      <summary>
+            Closes toast.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaToast.CloseAnyAll">
+      <summary>
+            Closes all toasts owned by this application.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaToast.Show(System.Drawing.Point)">
+      <summary>
+            Displays toast on specified region on the screen.
+            </summary>
+      <param name="point">
+      </param>
+    </member>
+    <member name="M:SaaUI.SaaToast.Show(System.Windows.Forms.Form)">
+      <summary>
+            Displays toast on the specified form.
+            </summary>
+      <param name="form">
+      </param>
+    </member>
+    <member name="T:SaaUI.SaaToggle">
+      <summary>
+            Beautiful and customizable SaaToggle.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaToggle.OnCheckChanged">
+      <summary>
+            Fires when Checked status is changed.
+            </summary>
+    </member>
+    <member name="E:SaaUI.SaaToggle.CheckChanged">
+      <summary>
+            Fires when Checked status is changed.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToggle.MouseClicks">
+      <summary>
+            Gets or Sets which mouse button does the control accepts.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToggle.ToggleStyle">
+      <summary>
+            Gets or Sets Toggle style. You can redesign each style with its respective design options e.g. iOS will take values in iOSStyle options.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToggle.SkewedStyle">
+      <summary>
+            Gets or Sets options related to Skewed Style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToggle.iOSStyle">
+      <summary>
+            Gets or Sets options related to iOS Style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToggle.FlatStyle">
+      <summary>
+            Gets or Sets options related to Flat Style.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToggle.Colors">
+      <summary>
+            Gets or Sets color options.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToggle.Checked">
+      <summary>
+            Gets or Sets whether the toggle is checked.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaToolTip">
+      <summary>
+            Customizable tooltip that shows information when user moves the pointer over an associated control.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaToolTip.CanExtend(System.Object)">
+      <summary>
+            Indicates whether a control is supported by the tooltip.
+            </summary>
+      <param name="extendee">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaToolTip.SetToolTip(System.Windows.Forms.Control,System.String)">
+      <summary>
+            Sets tooltip text associated with the specified control.
+            </summary>
+      <param name="control">target control</param>
+      <param name="tip">text associated with</param>
+    </member>
+    <member name="M:SaaUI.SaaToolTip.GetToolTip(System.Windows.Forms.Control)">
+      <summary>
+            Gets tooltip text associated with the specified control.
+            </summary>
+      <param name="control">target control</param>
+      <returns>tooltip text</returns>
+    </member>
+    <member name="M:SaaUI.SaaToolTip.Show(System.Windows.Forms.Control,System.String)">
+      <summary>
+            Shows tooltip for a control.
+            </summary>
+      <param name="control">target control</param>
+      <param name="tipText">text to display</param>
+    </member>
+    <member name="M:SaaUI.SaaToolTip.Hide(System.Windows.Forms.Control)">
+      <summary>
+            Hides tooltip for the specified control.
+            </summary>
+      <param name="control">
+      </param>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.ArrowHeight">
+      <summary>
+            Gets or Sets height of the tooltip arrow.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.ArrowWidth">
+      <summary>
+            Gets or Sets width of the tooltip arrow.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.OffsetX">
+      <summary>
+            Gets or Sets how far the tooltip will move away horizontally from the target control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.OffsetY">
+      <summary>
+            Gets or Sets how far the tooltip will move away vertically from the target control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.OffSize">
+      <summary>
+            Gets or Sets extra size to be added to the tooltip.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.ArrowStart">
+      <summary>
+            Gets or Sets the location of the tooltip arrow. Empty means center.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.BackgroundColor">
+      <summary>
+            Gets or Sets background color of the tooltip.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.Position">
+      <summary>
+            Gets or Sets where the tooltip is placed relative to the associated control.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.Duration">
+      <summary>
+            Gets or Sets in milliseconds, the time the tooltip will be visible to the user after it has been shown.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.Delay">
+      <summary>
+            Gets or Sets in milliseconds, the time the pointer should be on the associated control before the tooltip is shown.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.Active">
+      <summary>
+            Gets or Sets whether the tooltip is enabled. 
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.ShowAlways">
+      <summary>
+            Gets or Sets whether the tooltip will always be visible as long as the pointer is over the associated control. If TRUE, 'Duration' will be ignored.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.TextColor">
+      <summary>
+            Gets or Sets color of the text.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.TextOffsetX">
+      <summary>
+            Gets or Sets how far the text will be moved from left to right side.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.TextOffsetY">
+      <summary>
+            Gets or Sets how far the text will be moved from top to bottom.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.Font">
+      <summary>
+            Gets or Sets the font of the tooltip.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.Radius">
+      <summary>
+            Gets or Sets the radius of the tooltip. This is the roundness of the tooltip edges.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaToolTip.ShowArrow">
+      <summary>
+            Gets or Sets whether the tooltip arrow is visible.
+            </summary>
+    </member>
+    <member name="T:SaaUI.SaaChatPanel">
+      <summary>
+            A panel that Organizes SaaChatBubbles.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.AddMessage(SaaUI.SaaChatBubble)">
+      <summary>
+            Add message to the chat panel.
+            </summary>
+      <param name="message">Message to add</param>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.AddMessage(SaaUI.SaaChatBubble,System.String)">
+      <summary>
+            Add message to the chat panel with an id.
+            </summary>
+      <param name="message">Message to add</param>
+      <param name="messageID">Id of the message</param>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.Remove(System.String)">
+      <summary>
+            Remove a message from the chat panel with its messageId.
+            </summary>
+      <param name="messageID">
+      </param>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.Remove(SaaUI.SaaChatBubble)">
+      <summary>
+            Remove a message from the chat panel.
+            </summary>
+      <param name="message">
+      </param>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.RemoveAll">
+      <summary>
+            Remove all messages in the chat panel.
+            </summary>
+    </member>
+    <member name="P:SaaUI.SaaChatPanel.Messages">
+      <summary>
+            Gets all messages in the chat panel.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.GetMessage(System.Int32)">
+      <summary>
+            Get a message by index
+            </summary>
+      <param name="index">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.GetMessage(System.String)">
+      <summary>
+            Get a message by messageId
+            </summary>
+      <param name="MessageId">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.GetMessageIndex(SaaUI.SaaChatBubble)">
+      <summary>
+            Gets the index of the specified message.
+            </summary>
+      <param name="message">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.GetMessageId(SaaUI.SaaChatBubble)">
+      <summary>
+            Gets the messageId of the specified message. 
+            </summary>
+      <param name="message">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:SaaUI.SaaChatPanel.Item(System.Int32)">
+      <summary>
+            Get a message by Index
+            </summary>
+      <param name="index">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:SaaUI.SaaChatPanel.Item(SaaUI.SaaChatBubble)">
+      <summary>
+            Gets the index of the specified message.
+            </summary>
+      <param name="message">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:SaaUI.SaaChatPanel.Item(System.String)">
+      <summary>
+            Gets a message by messageId
+            </summary>
+      <param name="messageID">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.InvalidateBubbles">
+      <summary>
+            Invalidates and redraws messages in the chat panel.
+            </summary>
+    </member>
+    <member name="M:SaaUI.SaaChatPanel.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+  </members>
+</doc>
