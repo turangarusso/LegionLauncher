@@ -24,16 +24,16 @@
 ## Key Features
 
 * One click launch
-  - Instantly start the game and login in the custom server.
-* Connect to FiveM Server Automatic 
-* Automatic DNS change
-* FiveM Cache Cleaner
+  - Instantly start the game and connect to fiveM server.
+* Automatic connect to Teamspeak channel
+* DNS change tool
+* Auto FiveM Cache Cleaner
 * Reshade Cleaner
 * Windows Cleaner
 * Booster FPS – FiveM
 * Optimization tools
 * Autostart steam discord and ts
-
+* Easy fix FiveM and ts common issues
 
 ## How To Use
 
