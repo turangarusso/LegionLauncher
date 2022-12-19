@@ -26,11 +26,11 @@
 * One click launch
   - Instantly start the game and connect to fiveM server.
 * Automatic connect to Teamspeak channel
-* DNS change tool
-* Auto FiveM Cache Cleaner
+* DNS changer tool
+* FiveM Cache Cleaner
 * Reshade Cleaner
 * Windows Cleaner
-* Booster FPS – FiveM
+* Booster FPS – (code is private)
 * Optimization tools
 * Autostart steam discord and ts
 * Easy fix FiveM and ts common issues
