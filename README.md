@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://www.legionrp.it/"><img src="https://www.legionrp.it/wp-content/uploads/2022/05/cropped-transparent_2-1-300x253.png" alt="FiveM Launcher" width="200"></a>
+  <a href="https://www.legionrp.it/"><img src="https://user-images.githubusercontent.com/113531412/226466238-9709e61d-5a47-4228-9333-53891ab668b8.png" alt="FiveM Launcher" width="200"></a>
   <br>
   Legion Launcher
   <br>
