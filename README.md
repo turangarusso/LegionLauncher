@@ -19,7 +19,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://www.legionrp.it/wp-content/uploads/2022/05/Cattura1.png)
+![Unknown](https://user-images.githubusercontent.com/113531412/233047043-2a4a8f65-3498-41f1-b1bc-e2b79c7d41c9.jpeg)
 
 ## Key Features
 
