@@ -23,6 +23,8 @@
 
 ## Key Features
 
+The code for some features is private!
+
 * One click launch
   - Instantly start the game and connect to fiveM server.
 * Automatic connect to Teamspeak channel
