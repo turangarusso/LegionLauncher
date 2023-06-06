@@ -62,6 +62,9 @@ Boost CPU and RAM: decreases the overall load on the cpu for those suffering fro
 
 Commands Fix: restore the commands on Fivem, solve the bug that some players experience on other servers of the clothes wheel that doesn't work properly, solve the problem of the fixed pointer in the center of the screen, solve problems with the radio and menu commands with a simple click!
 
+![LegionLauncherdns](https://github.com/turangarusso/LegionLauncher/assets/113531412/069a4525-2dfa-47f3-a42a-714142c19d1f)
+
+
 > **Note**
 > You need to have TeamSpeak and FiveM installed in the default directory!
 
