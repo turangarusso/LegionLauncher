@@ -19,7 +19,9 @@
   <a href="#license">License</a>
 </p>
 
-![Unknown](https://user-images.githubusercontent.com/113531412/233047043-2a4a8f65-3498-41f1-b1bc-e2b79c7d41c9.jpeg)
+
+![legionlauncher](https://github.com/turangarusso/LegionLauncher/assets/113531412/f90a9ad4-5c0d-4af5-a118-be5504b00def)
+
 
 ## Key Features
 
